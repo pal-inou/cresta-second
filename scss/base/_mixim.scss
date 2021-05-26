@@ -1,0 +1,8 @@
+@import "setting";
+
+//メディアクエリー--------------------------------------------------
+@mixin mq($breakpoint){
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}

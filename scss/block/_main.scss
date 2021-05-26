@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@import "../base/setting";
+// ==========================================================================
+// /* メインコンテンツ */
+// ==========================================================================
+// ==========================================================================
+// /* CONCEPT */
+// ==========================================================================
+
+.concept{
+    &__lead{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 60px;
+        line-height: 1.4;
+        @include mq('sp'){
+            font-size: 5.3vw;
+            margin: -20px 0 30px;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+        @include mq('sp'){
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+    }
+    &__text{
+        flex-basis: 44%;
+        font-weight: bold;
+        @include mq('sp'){
+            margin-bottom: 30px;
+            line-height: 1.875;
+        }
+    }
+    &__img{
+        flex-basis: 44%;
+        max-width: 440px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+// ==========================================================================
+// /* Works */
+// ==========================================================================
+.works{
+    background: url("../../img/works-bgi@2x.jpg") no-repeat center/cover;
+    width: 100%;
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 80px;
+        @include mq('sp'){
+            flex-direction: column;
+            margin: -20px 4vw 80px;
+        }
+    }
+    &__item{
+        flex-basis: 32%;
+        display: flex; /*<p>ボックスの高さ合わせ*/
+        flex-direction: column;
+        @include mq('sp'){
+            margin-bottom: 30px;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+
+        a{
+            display: flex; /*<p>の高さ合わせ*/
+            flex-direction: column;
+            flex-grow: 1;
+            color: $font-color_main;
+        }
+        img{
+            flex-grow: 0;
+        }
+        p{
+            background-color: #fff;
+            padding: 25px 20px;
+            flex-grow: 1;
+        }
+    }
+}
+
+// ==========================================================================
+// /* Service */
+// ==========================================================================
+.service{
+    @include mq('sp'){
+        margin-bottom: 24px;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 70px;
+        @include mq('sp'){
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item{
+        flex-basis: 33.3%;
+        min-height: 320px;
+        background-size: cover;
+        @include mq('sp'){
+            margin-bottom: 30px;
+            min-height: 250px;
+        }
+        &--1{
+            background-image: url("../../img/service-img01@2x.jpg");
+        }
+        &--2{
+            background-image: url("../../img/service-img02@2x.jpg");
+        }
+        &--3{
+            background-image: url("../../img/sevice-img03@2x.jpg");
+            margin-bottom: 0;
+        }
+        a{
+            color: #fff;
+            font-size: 4rem;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            line-height: 8;
+            @include mq('sp'){
+                font-size: 2rem;
+                line-height: 12.5;
+            }
+
+            &:hover{
+                opacity: 1;
+                background-color: $hover-dark;
+            }
+        }
+    }
+}
+
+// ==========================================================================
+// /* Contact */
+// ==========================================================================
+.contact{
+    background: url("../../img/contact-bgi@2x.jpg")no-repeat center/cover;
+
+    &__text{
+        text-align: center;
+        color: #fff;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        font-weight: bold;
+        @include mq('sp'){
+            margin-bottom: 30px;
+        }
+    }
+}

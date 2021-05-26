@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// /* 共通の設定 */
+// ==========================================================================
+@import "setting";
+
+/* 全体 */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    font-family: $font-family;
+    color: $font-color_main;
+}
+
+ul,
+li,
+ol {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+
+.link-btn{
+    display: block;
+    background-color: $btn-color;
+    color: $font-color_main;
+    width: 235px;
+    line-height: 3;
+    margin: 0 auto 70px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 0 6px rgb(27,19,16);
+    font-weight: bold;
+    @include mq('sp'){
+        margin-bottom: 40px;
+    }
+}
+
+/*コンテンツ幅*/
+.container{
+    max-width: $layout-width-inner;
+    margin: 0 auto;
+    width: 90%;
+    @include mq('sp'){
+        padding: 0 4vw;
+        width: 100%;
+    }
+}
+
+/* セクション設定 */
+.section {
+    &__wrapper {
+        padding: 100px 0 70px;
+        @include mq('sp'){
+            padding-bottom: 40px;
+        }
+    }
+
+    &__title{
+        font-size: 6rem;
+        font-weight: bold;
+        font-style: italic;
+        max-width: $layout-width-inner;
+        margin: 0 auto 70px;
+        padding: 0 20px;
+        line-height: 1.4;
+        letter-spacing: 0.07em;
+        @include mq('sp'){
+            font-size: 8vw;
+        }
+
+        &::after{
+            content: "";
+            display: inline-block;
+            background-color: $font-color_main;
+            width: 200px;
+            height: 5px;
+            margin-left: 30px;
+            vertical-align: middle;
+            @include mq('sp'){
+                width: 90px;
+            }
+        }
+
+        &--right{
+            text-align: right;
+            max-width: $layout-width-outer;
+            color: #fff;
+            &::after{
+                background-color: #fff;
+            }
+        }
+    }
+    &__btm-text{
+        display: block;
+        font-size: 9rem;
+        font-weight: bold;
+        color: rgba(255,255,255,.05);
+        max-width: $layout-width-outer;
+        margin: 0 auto;
+        line-height: 1.5;
+        &--right{
+            text-align: right;
+            color: rgba(23,23,23,.05);
+        }
+        @include mq('sp'){
+            font-size: 4rem;
+            padding: 0 4vw;
+        }
+    }
+}
+
+/* -------------------------
+メディアクエリ 共通設定
+------------------------- */
+@include mq('sp'){
+	body{
+        overflow-X: hidden;
+    }
+    .pc-br{
+        display: none;
+    }
+}
+.sp-br{
+    display: none;
+    @include mq('sp'){
+        display: block;
+    }
+}
+body.noscroll{
+    overflow: hidden;
+}

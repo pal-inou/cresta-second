@@ -1,0 +1,10 @@
+//baseフォルダの読み込み
+@import "base/reset";
+@import "base/setting";
+@import "base/mixim";
+@import "base/base";
+
+//blockフォルダの読み込み
+@import "block/header";
+@import "block/main";
+@import "block/footer";
