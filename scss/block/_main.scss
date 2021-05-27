@@ -41,9 +41,6 @@
     &__img{
         flex-basis: 44%;
         max-width: 440px;
-        img{
-            width: 100%;
-        }
     }
 }
 
@@ -75,21 +72,20 @@
                 margin-bottom: 0;
             }
         }
-
-        a{
-            display: flex; /*<p>の高さ合わせ*/
-            flex-direction: column;
-            flex-grow: 1;
-            color: $font-color_main;
-        }
-        img{
-            flex-grow: 0;
-        }
-        p{
-            background-color: #fff;
-            padding: 25px 20px;
-            flex-grow: 1;
-        }
+    }
+    &__link{
+        flex-grow: 1;
+        color: $font-color_main;
+        display: flex; /*<p>内の高さ合わせ*/
+        flex-direction: column;
+    }
+    &__img{
+        flex-grow: 0;
+    }
+    &__text{
+        background-color: #fff;
+        padding: 25px 20px;
+        flex-grow: 1;
     }
 }
 
@@ -130,22 +126,22 @@
             background-image: url("../../img/sevice-img03@2x.jpg");
             margin-bottom: 0;
         }
-        a{
-            color: #fff;
-            font-size: 4rem;
-            font-weight: bold;
-            display: block;
-            text-align: center;
-            line-height: 8;
-            @include mq('sp'){
-                font-size: 2rem;
-                line-height: 12.5;
-            }
-
-            &:hover{
-                opacity: 1;
-                background-color: $hover-dark;
-            }
+    }
+    
+    &__link{
+        color: #fff;
+        font-size: 4rem;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        line-height: 8;
+        @include mq('sp'){
+            font-size: 2rem;
+            line-height: 12.5;
+        }
+        &:hover{
+            opacity: 1;
+            background-color: $hover-dark;
         }
     }
 }
